@@ -21,10 +21,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from instantnoodlep device
 $(call inherit-product, device/oneplus/instantnoodlep/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Nameless-AOSP stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_instantnoodlep
+# Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1440
+
+PRODUCT_NAME := aosp_instantnoodlep
 PRODUCT_DEVICE := instantnoodlep
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -39,5 +42,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=OnePlus8Pro \
     TARGET_PRODUCT=OnePlus8Pro_EEA \
     PRIVATE_BUILD_DESC="OnePlus8Pro-user 11   release-keys"
-
-BUILD_FINGERPRINT := OnePlus/OnePlus8Pro/OnePlus8Pro:10/QKQ1.191222.002/2005301332:user/release-keys
