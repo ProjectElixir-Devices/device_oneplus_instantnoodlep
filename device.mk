@@ -37,8 +37,7 @@ PRODUCT_COPY_FILES += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.recovery.target.rc
+    fstab.qcom
 
 # PowerShare
 PRODUCT_PACKAGES += \
@@ -47,7 +46,7 @@ PRODUCT_PACKAGES += \
 # Wifi Overlay
 PRODUCT_PACKAGES += \
     OnePlus8PWifiOverlay
-
+    
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Inherit from oneplus sm8250-common

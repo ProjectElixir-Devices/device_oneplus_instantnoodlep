@@ -21,13 +21,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from instantnoodlep device
 $(call inherit-product, device/oneplus/instantnoodlep/device.mk)
 
-# Inherit some common Nameless-AOSP stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1440
 
-PRODUCT_NAME := aosp_instantnoodlep
+PRODUCT_NAME := instantnoodlep
 PRODUCT_DEVICE := instantnoodlep
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -40,5 +37,14 @@ PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=OnePlus8Pro \
-    TARGET_PRODUCT=OnePlus8Pro_EEA \
-    PRIVATE_BUILD_DESC="OnePlus8Pro-user 11   release-keys"
+    TARGET_PRODUCT=OnePlus8Pro_EEA
+    
+TARGET_SUPPORTS_QUICK_TAP := true
+WITH_GMS := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+USE_PIXEL_CHARGER_IMAGES := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+
+BUILD_FINGERPRINT := google/raven/raven:12/SQ3A.220605.009.B1/8650216:user/release-keys
