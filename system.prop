@@ -1,0 +1,3 @@
+ro.elixir.maintainer=Mehdi
+org.elixir.device=OnePlus 8 Pro
+Elixir_MAINTAINER := Mehdi
