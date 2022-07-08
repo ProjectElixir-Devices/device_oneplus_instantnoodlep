@@ -25,6 +25,9 @@ $(call inherit-product, device/oneplus/instantnoodlep/device.mk)
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 $(call inherit-product, vendor/aosp/config/common.mk)
 
+# Inherit GoogleCamera
+$(call inherit-product, vendor/GoogleCamera/config.mk)
+
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1440
 
@@ -39,7 +42,6 @@ TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_USES_AOSP_RECOVERY := true
 EXTRA_UDFPS_ANIMATIONS := true
-Elixir_MAINTAINER := Mehdi
 
 PRODUCT_NAME := aosp_instantnoodlep
 PRODUCT_DEVICE := instantnoodlep
