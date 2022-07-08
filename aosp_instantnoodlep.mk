@@ -32,7 +32,6 @@ $(call inherit-product, vendor/GoogleCamera/config.mk)
 TARGET_BOOT_ANIMATION_RES := 1440
 
 # Elixir Official
-
 IS_PHONE := true
 TARGET_SUPPORTS_QUICK_TAP := true
 CUSTOM_BUILD_TYPE := OFFICIAL
@@ -53,3 +52,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE=OnePlus8Pro
+
+# Pixel Launcher
+$(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)
